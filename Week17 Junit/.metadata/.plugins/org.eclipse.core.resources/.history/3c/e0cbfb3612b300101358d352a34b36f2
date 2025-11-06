@@ -1,0 +1,68 @@
+package com.kodewala.calculator;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class AddTwoNumberTest {
+    
+	  AddTwoNumber addtwonumber;
+	 
+	@Before
+	public void setupt()
+	{
+		System.out.println("creating object....");
+	     addtwonumber  = new AddTwoNumber();
+	}
+	
+	@After
+	public  void cleanup()
+	{
+		System.out.println("Cleaning up object....");
+		addtwonumber=null;
+	}
+	
+	@Test
+	public void checkSumwithPositive()
+	{
+		int expected = 7;
+		int actual = addtwonumber.Addition(5, 2);
+		
+		assertEquals(expected,actual);
+	}
+	
+	@Test
+	public void checkSumNegative()
+	{
+		int expected = 0;
+		int actual = addtwonumber.Addition(-8, 1);
+		assertNotEquals(expected,actual);
+	}
+	
+	@Test
+	public void checkSumBothNegative()
+	{
+		int expected = 0;
+		int actual = addtwonumber.Addition(-5, -2);
+		assertEquals(expected,actual);
+	}
+	
+
+	@Test
+	public void checkSumZero()
+	{
+		int expected = 9;
+		int actual = addtwonumber.Addition(9, 0);
+		assertEquals(expected,actual);
+	}
+	
+	@Test
+	public void checkSumBothZero()
+	{
+		int expected = 0;
+		int actual = addtwonumber.Addition(0, 0);
+		assertEquals(expected,actual);
+	}
+}

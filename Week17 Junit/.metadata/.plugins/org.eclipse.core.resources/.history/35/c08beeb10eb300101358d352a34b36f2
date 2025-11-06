@@ -1,0 +1,35 @@
+package com.kodewala.calculator;
+
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class AddTwoNumberTest {
+    
+	 static AddTwoNumber addtwonumber;
+	@Before
+	public static void setupt()
+	{
+		System.out.println("creating object....");
+	     addtwonumber  = new AddTwoNumber();
+	}
+	
+	@After
+	public static void cleanup()
+	{
+		System.out.println("Cleaning up object....");
+		addtwonumber=null;
+	}
+	
+	@Test
+	public void checkSumwithPositive()
+	{
+		int expected = 7;
+		int actual = addtwonumber.Addition(5, 2);
+		
+		assertEquals(expected,actual);
+	}
+}

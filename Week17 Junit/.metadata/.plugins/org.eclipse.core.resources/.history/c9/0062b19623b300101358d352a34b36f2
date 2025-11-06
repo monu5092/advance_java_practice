@@ -1,0 +1,24 @@
+package com.kodewala.practice.junit.bank;
+
+public class BankAccount {
+   public double deposit(double balance,double amount)
+   {
+	   if(amount<0)
+	   {
+		   throw new IllegalArgumentException("Deposite amount not valid");
+	   }
+	  return balance+amount;
+   }
+   
+   public double withdraw(double balance,double amount)
+   {
+	   if(balance<amount)
+	   {
+		   throw new IllegalArgumentException("InSufficent Balance...");
+	   }
+	   else if(amount<0) {
+		   throw new IllegalArgumentException("Amount should not be negative.....");
+	   }
+	   return balance-amount;
+   }
+}

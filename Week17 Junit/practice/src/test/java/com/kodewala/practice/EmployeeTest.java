@@ -1,0 +1,55 @@
+package com.kodewala.practice;
+
+
+import static org.junit.Assert.assertEquals;
+
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class EmployeeTest {
+	
+	Employee employee;
+	
+	@Before
+	public void setup()
+	{
+		System.out.println("Object is created.....");
+		employee = new Employee();
+	}
+	
+	@After
+	public void cleanup()
+	{
+		System.out.println("Cleaning Object.......");
+        employee = null;
+	}
+	
+	@Test
+	public void applyBonusWithPositive()
+	{
+		double expected = 11000.0;
+		double actual = employee.applyBonus(10000, 10);
+		assertEquals(expected,actual,00.1);
+	}
+	
+	@Test
+	public void applyBonuswithZero()
+	{
+		double expected = 10000.0;
+		double actual = employee.applyBonus(10000, 0);
+		assertEquals(expected,actual,00.1);
+	}
+	
+	@Test
+	public void applyBonuswithZeroSalary()
+	{
+		double expected = 0.0;
+		double actual = employee.applyBonus(10000, 0);
+		assertEquals(expected,actual,00.1);
+	}
+	
+	
+	
+}

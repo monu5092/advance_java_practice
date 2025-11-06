@@ -1,0 +1,23 @@
+package com.kodewala.practice;
+
+import org.junit.After;
+import org.junit.Before;
+
+public class EmployeeTest {
+	
+	Employee employee;
+	
+	@Before
+	public void setup()
+	{
+		System.out.println("Object is created.....");
+		employee = new Employee();
+	}
+	
+	@After
+	public void cleanup()
+	{
+		System.out.println("Cleaning Object.......");
+        employee == null;
+	}
+}

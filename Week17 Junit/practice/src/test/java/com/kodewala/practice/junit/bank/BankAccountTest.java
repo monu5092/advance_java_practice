@@ -1,0 +1,11 @@
+package com.kodewala.practice.junit.bank;
+
+import com.kodewala.practice.practice.junit.bank.BankAccount;
+
+public class BankAccountTest {
+    
+	BankAccount bankaccount;
+	
+	
+	
+}
