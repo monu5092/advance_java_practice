@@ -1,5 +1,7 @@
 spring.application.name=ProductServiceFeign
 
+server.port= 8082
+
 spring.datasource.url=jdbc:mysql://localhost:3306/product-dev
 spring.datasource.username=root
 spring.datasource.password=Monu@20345092
