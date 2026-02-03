@@ -1,0 +1,32 @@
+package com.kodewala.practice;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class EmployeeTest {
+	
+	Employee employee;
+	
+	@Before
+	public void setup()
+	{
+		System.out.println("Object is created.....");
+		employee = new Employee();
+	}
+	
+	@After
+	public void cleanup()
+	{
+		System.out.println("Cleaning Object.......");
+        employee = null;
+	}
+	
+	@Test
+	public void applyBonus()
+	{
+		double expected = 11000.0;
+		double actual = employee.applyBonus(10000, 100);
+	}
+	
+}

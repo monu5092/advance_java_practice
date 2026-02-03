@@ -1,0 +1,16 @@
+package com.kodewala;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.kodewala.beans.SpringConfig;
+
+public class App {
+	public static void main(String args[])
+	{
+		ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+		
+		Order order = context.getBean(Order.class);
+		System.out.println(order);
+	}
+}

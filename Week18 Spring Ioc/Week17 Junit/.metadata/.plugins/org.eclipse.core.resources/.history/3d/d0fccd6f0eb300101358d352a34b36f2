@@ -1,0 +1,8 @@
+package com.kodewala.calculator;
+
+public class AddTwoNumber {
+    public double Addition(int a,int b )
+    {
+    	return (double)(a+b);
+    }
+}

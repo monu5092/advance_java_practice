@@ -1,0 +1,21 @@
+package com.kodewala.calculator;
+
+import org.junit.After;
+import org.junit.Before;
+
+public class AddTwoNumberTest {
+    
+	 static AddTwoNumber addtwonumber;
+	@Before
+	public static void setupt()
+	{
+		System.out.println("creating object....");
+	     addtwonumber  = new AddTwoNumber();
+	}
+	
+	@After
+	public static void cleanup()
+	{
+		System.out.println("Cleaning up object....");
+	}
+}

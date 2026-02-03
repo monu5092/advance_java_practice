@@ -1,0 +1,5 @@
+package com.kodewala.practice.junit.bank;
+
+public class BankAccount {
+
+}

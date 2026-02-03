@@ -1,0 +1,34 @@
+package com.kodewala.practice;
+
+import static org.junit.Assert.assertNotEquals;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class LeapYearTest {
+    
+	LeapYear leapyear;
+	
+	@Before
+	public void setUp()
+	{
+		System.out.println("Object is created.......");
+		leapyear = new LeapYear();
+	}
+	
+	@After
+	public void cleanUp()
+	{
+		System.out.println("Cleaning Object....... ");
+		leapyear = null;
+	}
+	
+	@Test
+	public void leapYearchecker()
+	{
+		boolean expected = true;
+		boolean actual = leapyear.leapYearChecker(1900);
+		assertNotEquals(expected,actual);
+	}
+}
